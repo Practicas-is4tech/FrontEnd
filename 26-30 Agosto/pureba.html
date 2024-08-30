@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar -->
+            <div class="col-md-2 bg-primary text-white vh-100 sidebar">
+                <h4 class="my-4">The Trade Desk</h4>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Reports</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">Configure</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#">History</a>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-10">
+                <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                    <div class="navbar-brand">Performance Management</div>
+                    <div class="ml-auto">
+                        <button class="btn btn-light">🔔</button>
+                        <button class="btn btn-light">👤</button>
+                    </div>
+                </nav>
+                
+                <div class="row mt-4">
+                    <!-- Card 1 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-success">+14%</h5>
+                                <p class="card-text">QTD</p>
+                                <p class="small text-muted">Monthly Trend (last 3 months)</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Last updated 4 days ago
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title text-danger">-6%</h5>
+                                <p class="card-text">QTD</p>
+                                <p class="small text-muted">Yearly Trend (last 3 years)</p>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Last updated 3 days ago
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-md-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <ul class="list-group">
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        Front-end
+                                        <span class="badge badge-success badge-pill">91%</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        UX Design
+                                        <span class="badge badge-success badge-pill">84%</span>
+                                    </li>
+                                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                                        QA
+                                        <span class="badge badge-success badge-pill">72%</span>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Last updated 4 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row mt-4">
+                    <!-- Chart Card -->
+                    <div class="col-md-6">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Quarterly team performance - last 2 years (percentage of goal)</h5>
+                                <canvas id="performanceChart"></canvas>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Last updated 2 days ago
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Circular Progress 1 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Meetings attended by team (QTD)</h5>
+                                <div class="circular-progress" id="progress1">73%</div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Last updated 1 day ago
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Circular Progress 2 -->
+                    <div class="col-md-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">Engineering performance (QTD)</h5>
+                                <div class="circular-progress" id="progress2">85%</div>
+                            </div>
+                            <div class="card-footer text-muted">
+                                Last updated 2 days ago
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="scripts.js"></script>
+</body>
+</html>

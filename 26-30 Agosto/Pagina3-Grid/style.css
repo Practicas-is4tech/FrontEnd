@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+div {
+    color: red;
+}
+
+.content-grid {
+    display: grid;
+    background-color: antiquewhite;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(13, 1fr);
+
+}
+
+.cuadro {
+    background-color: #f1f1f1;
+    border: 2px solid #eb0000;
+
+}
+
+.adentro{
+    margin: 5px;
+}
+
+.radius{
+    border-radius: 15px;
+}
+
+.c1 {
+    background-color: darkgreen;
+    grid-area: 1/1/14/3;
+    width: 75%;
+    z-index: 1;
+}
+
+.c2 {
+    background-color: yellow;
+    grid-area: 1/1/2/11;
+}
+
+.c3 {
+    background-color: blue;
+    grid-area: 2/3/3/11;
+}
+
+.c4 {
+    background-color: greenyellow;
+    grid-area: 3/3/4/5;
+}
+
+.c5{
+    background-color: darkorange;
+    grid-area: 3/5/4/7;
+}
+
+.c6 {
+    background-color: darkred;
+    grid-area: 3/7/4/9;
+}   
+
+.c7 {
+    background-color: darkblue;
+    grid-area: 3/9/4/11;
+}
+
+.c8{
+    background-color: mediumseagreen;
+    grid-area: 4/3/9/7;
+}
+
+.c9 {
+    background-color: darkgoldenrod;
+    grid-area: 4/7/7/9;
+}
+
+.c10 {
+    background-color: darkmagenta;
+    grid-area: 4/9/7/11;
+}
+
+.c11 {
+    background-color: darkslategray;
+    grid-area: 7/7/9/11;
+}
+
+.c12 {
+    background-color: darkviolet;
+    grid-area: 9/3/14/8;
+}
+
+.c13 {
+    background-color: darkturquoise;
+    grid-area: 9/8/14/11;
+}

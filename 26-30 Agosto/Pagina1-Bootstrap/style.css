@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.cuadro{
+    border: 1px solid black;
+}
+
+.contenedor1 {
+    height: 300px;
+}
+
+.contenedor2 {
+    height: 550px;
+}
