@@ -1,0 +1,29 @@
+@mixin input {
+    width: 100%;
+    height: 30px;
+    margin-top: 10px;
+    border: none;
+    border-bottom: 1px solid #363535;
+    outline: none;
+
+    &.message_input {
+        margin-top: 45px;
+    }
+
+    &::-webkit-input-placeholder {
+        color: rgba(35, 9, 9, 0.6);
+    }
+
+
+    &:-ms-input-placeholder {
+        color: rgba(35, 9, 9, 0.6);
+    }
+
+    &::-ms-input-placeholder {
+        color: rgba(35, 9, 9, 0.6);
+    }
+
+    &::placeholder {
+        color: rgba(35, 9, 9, 0.6);
+    }
+}

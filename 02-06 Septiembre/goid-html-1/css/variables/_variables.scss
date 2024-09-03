@@ -1,0 +1,11 @@
+$background-color-skyBlue: #51b5ef;
+$background-color-white: #ffffff;
+$background-color-black: #262626;
+$display-inline-block: inline-block;
+$color-P: #272727;
+
+$color1: #ff7f50;
+$color2: #ff6347;
+$mezcla: mix($color1, $color2, 50%);
+
+$colo-operation:  lighten($background-color-skyBlue, 20%);
