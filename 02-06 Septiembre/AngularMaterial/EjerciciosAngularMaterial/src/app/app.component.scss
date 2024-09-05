@@ -1,0 +1,22 @@
+.box {
+    text-align: center;
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        display: inline-flex;
+
+        li {
+            margin: 10px;
+
+            a {
+                text-decoration: none;
+                color: black;
+
+                &:hover {
+                    color: cyan;
+                }
+            }
+        }
+    }
+}
