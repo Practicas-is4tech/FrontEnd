@@ -1,0 +1,11 @@
+<body>
+    <div class="box">
+        <label>Escribí algo: </label>
+        <div>
+            <input type="text" [(ngModel)]="valor1" (input)="onChangeInput()" />
+        </div>
+        <div>
+            <h1>{{valor1}}</h1>
+        </div>
+    </div>
+</body>
