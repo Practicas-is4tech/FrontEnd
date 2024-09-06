@@ -9,6 +9,7 @@ import { TableListComponent } from './components/table-list/table-list.component
 import { RouterLink } from '@angular/router';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatButtonModule } from '@angular/material/button';
+import { StepperComponent } from './components/stepper/stepper.component';
 
 
 @Component({
@@ -24,8 +25,9 @@ import { MatButtonModule } from '@angular/material/button';
     MatMenuModule,
     MatButtonModule,
     ButtonFABComponent,
-    TableListComponent
-],
+    TableListComponent,
+    StepperComponent
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

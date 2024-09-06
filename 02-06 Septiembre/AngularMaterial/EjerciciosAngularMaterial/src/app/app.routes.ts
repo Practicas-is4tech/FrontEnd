@@ -5,6 +5,7 @@ import { Datapickers3Component } from './components/datapickers3/datapickers3.co
 import { Datapickers4Component } from './components/datapickers4/datapickers4.component';
 import { ButtonFABComponent } from './components/button-fab/button-fab.component';
 import { TableListComponent } from './components/table-list/table-list.component';
+import { StepperComponent } from './components/stepper/stepper.component';
 
 export const routes: Routes = [
     {
@@ -24,6 +25,8 @@ export const routes: Routes = [
     },
     {
         path: 'table-list', component: TableListComponent
+    },
+    {
+        path: 'stepper', component: StepperComponent
     }
-
 ];

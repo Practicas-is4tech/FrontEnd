@@ -3,11 +3,13 @@ import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
 import { MatPaginator, MatPaginatorModule } from '@angular/material/paginator';
 import { MatSort, MatSortModule, Sort } from '@angular/material/sort';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 
 @Component({
   selector: 'app-table-list',
   standalone: true,
-  imports: [MatTableModule, MatPaginatorModule, MatSortModule],
+  imports: [MatTableModule, MatPaginatorModule, MatSortModule, MatFormFieldModule, MatInputModule],
   templateUrl: './table-list.component.html',
   styleUrls: ['./table-list.component.scss']
 })
@@ -27,6 +29,10 @@ export class TableListComponent implements AfterViewInit {
     this.sort.sortChange.subscribe((sortState: Sort) => {
       this.announceSortChange(sortState);
     });
+
+    this.dataSource.filterPredicate = (data: PersonasList, filter: string) => {
+      return data.nombre.toLowerCase().includes(filter);
+    };
   }
 
   announceSortChange(sortState: Sort) {
@@ -36,6 +42,13 @@ export class TableListComponent implements AfterViewInit {
       this._liveAnnouncer.announce('Sorting cleared');
     }
   }
+
+  applyFilter(event: Event) {
+    const filterValue = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+
 }
 
 export interface PersonasList {

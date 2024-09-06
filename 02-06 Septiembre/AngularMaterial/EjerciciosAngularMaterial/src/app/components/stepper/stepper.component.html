@@ -1,0 +1,56 @@
+<!-- <button mat-raised-button (click)="isEditable = !isEditable">
+    {{!isEditable ? 'Enable edit mode' : 'Disable edit mode'}}
+  </button> -->
+<div class="box">
+    <mat-stepper linear #stepper>
+        <mat-step [stepControl]="firstFormGroup" [editable]="isEditable">
+            <form [formGroup]="firstFormGroup">
+                <ng-template matStepLabel>Birthdate</ng-template>
+                <mat-form-field>
+                    <mat-label>Date</mat-label>
+                    <input matInput [matDatepicker]="picker" [max]="maxDate" [min]="minDate" formControlName="firstCtrl"
+                        required>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-datepicker #picker></mat-datepicker></mat-form-field>
+                <div>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step [stepControl]="secondFormGroup" [editable]="isEditable">
+            <form [formGroup]="secondFormGroup">
+                <ng-template matStepLabel>First Name</ng-template>
+                <mat-form-field>
+                    <mat-label>Name</mat-label>
+                    <input matInput formControlName="secondCtrl" placeholder="name" required>
+                </mat-form-field>
+                <div>
+                    <button mat-button matStepperPrevious>Back</button>
+                    <button mat-button matStepperNext>Next</button>
+                </div>
+            </form>
+        </mat-step>
+
+        <mat-step [stepControl]="thirdFormGroup" [editable]="isDpiEnabled">
+            <ng-template matStepLabel>Additional Information</ng-template>
+
+            <form [formGroup]="thirdFormGroup">
+                <mat-slide-toggle formControlName="isDpiEnabled">DPI</mat-slide-toggle>
+
+                <div *ngIf="isDpiEnabled">
+                    <mat-form-field>
+                        <mat-label>DPI</mat-label>
+                        <div class="xd">
+                            <input matInput formControlName="dpiCtrl" placeholder="Enter DPI" required>
+                        </div>
+                    </mat-form-field>
+                </div>
+            </form>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+                <button mat-button (click)="stepper.reset()">Send</button>
+            </div>
+        </mat-step>
+    </mat-stepper>
+</div>
