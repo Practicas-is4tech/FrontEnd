@@ -1,17 +1,25 @@
-<div class="box">
-    <ul>
-        <li>
-            <a routerLink="/datapickers">Datepicker1</a>
-        </li>
-        <li>
-            <a routerLink="/datapickers2">Datepicker2</a>
-        </li>
-        <li>
-            <a routerLink="/datapickers3">Datepicker3</a>
-        </li>
-        <li>
-            <a routerLink="/datapickers4">Datepicker4</a>
-        </li>
-    </ul>
+<!-- <div class="box">
+    <button mat-button [matMenuTriggerFor]="belowMenu">Menu Datepickers</button>
+    <mat-menu #belowMenu="matMenu" yPosition="below">
+        <button class="item" mat-menu-item routerLink="/datapickers">Datepicker1</button>
+        <button class="item" mat-menu-item routerLink="/datapickers2">Datepicker2</button>
+        <button class="item" mat-menu-item routerLink="/datapickers3">Datepicker3</button>
+        <button class="item" mat-menu-item routerLink="/datapickers4">Datepicker4</button>
+    </mat-menu>
 </div>
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<div class="boxComplete">
+    <div class="boxx">
+        <app-datapickers></app-datapickers>
+        <app-datapickers2></app-datapickers2>
+        <app-datapickers3></app-datapickers3>
+        <app-datapickers4></app-datapickers4>
+
+    </div>
+    <div class="table">
+        <app-table-list></app-table-list>
+    </div>
+    <div class="fab">
+        <app-button-fab></app-button-fab>
+    </div>
+</div>

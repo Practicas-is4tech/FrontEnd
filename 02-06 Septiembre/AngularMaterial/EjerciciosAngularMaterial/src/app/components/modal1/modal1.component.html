@@ -1,0 +1,12 @@
+<h2 mat-dialog-title>Nombre</h2>
+<mat-dialog-content>
+    <p>Ingresa tu nombre :D</p>
+    <mat-form-field>
+        <mat-label>Nombre</mat-label>
+        <input matInput [(ngModel)]="name">
+    </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-button (click)="onCancel()">No :C</button>
+    <button mat-button (click)="onAccept()" [disabled]="!name">SI C:</button>
+</mat-dialog-actions>
