@@ -1,0 +1,36 @@
+img {
+    width: 25%;
+}
+
+.max-container {
+    width: 100%;
+    height: max-content;
+    border: 1px solid black;
+    text-align: center;
+    position: relative;
+
+    textarea {
+        width: 250px;
+        height: 100px;
+    }
+
+    .container {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        .btnClass {
+            position: absolute;
+            top: 50%;
+            margin: 10px;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imgClass {
+            border: 1px solid black;
+            width: 100%;
+            padding: 10px;
+        }
+    }
+}
