@@ -3,10 +3,12 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DogsComponent } from './admin/Components/dogs/dogs.component';
+import { LoginComponent } from './security/components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SocialAuthServiceConfig, GoogleLoginProvider, SocialLoginModule } from '@abacritt/angularx-social-login';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { SocialAuthServiceConfig, GoogleLoginProvider, SocialLoginModule } from 
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    SocialLoginModule
+    SocialLoginModule,
+    LoginComponent
   ],
   providers: [
     {
@@ -29,9 +32,10 @@ import { SocialAuthServiceConfig, GoogleLoginProvider, SocialLoginModule } from 
         providers: [
           {
             id: GoogleLoginProvider.PROVIDER_ID,
-            provider: new GoogleLoginProvider('915685675307-blfa747l8aoancfnu8694tlmljh7vh2s.apps.googleusercontent.com'),
+            provider: new GoogleLoginProvider(environment.googleClientId),
           },
         ],
+        onError: (error) => console.error(error),
       } as SocialAuthServiceConfig,
     },
   ],

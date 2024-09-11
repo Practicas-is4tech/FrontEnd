@@ -1,36 +1,42 @@
 img {
-    width: 25%;
+    width: 50%;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
 }
 
 .max-container {
     width: 100%;
-    height: max-content;
-    border: 1px solid black;
+    height: 100vh;
+    background-color: cadetblue;
     text-align: center;
     position: relative;
 
     textarea {
         width: 250px;
         height: 100px;
+        background-color: thistle;
     }
 
     .container {
-        border: 1px solid black;
-        display: flex;
-        flex-direction: row;
+        text-align: center;
+
         .btnClass {
-            position: absolute;
-            top: 50%;
-            margin: 10px;
-            text-align: center;
-            justify-content: center;
-            align-items: center;
+            margin: 10px 10px;
+
+            button {
+                border-radius: 10px;
+                background-color: lightblue;
+
+                &:hover {
+                    background-color: thistle;
+                }
+            }
         }
 
         .imgClass {
-            border: 1px solid black;
             width: 100%;
             padding: 10px;
+            margin: 10px;
         }
     }
 }
